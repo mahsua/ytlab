@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahsua YTLab — Free YouTube Thumbnail Downloader (HD 1080p), Description & Tag Extractor</title>
+  <meta name="description" content="Mahsua YTLab (ytlab.mahsua.com) is a free online YouTube Thumbnail Downloader, Description Extractor, and Tag Extractor. Paste any YouTube video or Shorts URL to save HD 1280x720 thumbnails, copy descriptions, timestamps, and inspect hidden SEO tags instantly." />
+  <meta name="keywords" content="mahsua ytlab, ytlab mahsua, youtube thumbnail downloader, youtube tag extractor, youtube description extractor, download youtube thumbnail hd, extract youtube tags, youtube shorts thumbnail grabber, copy youtube description, mahsua technology" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Mahsua Technology" />
+  <meta name="google-adsense-account" content="ca-pub-9351361840615541" />
+  <link rel="canonical" href="https://ytlab.mahsua.com/" />
+
+  <!-- Google AdSense Script (ca-pub-9351361840615541) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9351361840615541" crossorigin="anonymous"></script>
+
+  <!-- Open Graph / Social Preview Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ytlab.mahsua.com/" />
+  <meta property="og:title" content="Mahsua YTLab — Free YouTube Thumbnail Downloader, Description & Tag Extractor" />
+  <meta property="og:description" content="Paste any YouTube video, Shorts, or youtu.be link on Mahsua YTLab (ytlab.mahsua.com) to download HD thumbnails (1280x720), copy full descriptions & timestamps, and extract SEO tags." />
+  <meta property="og:site_name" content="Mahsua YTLab" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://ytlab.mahsua.com/" />
+  <meta name="twitter:title" content="Mahsua YTLab — Free YouTube Thumbnail Downloader, Description & Tag Extractor" />
+  <meta name="twitter:description" content="Download HD YouTube thumbnails, extract full video descriptions, and inspect hidden video tags in one click on ytlab.mahsua.com." />
+
+  <!-- Schema.org JSON-LD Structured Data (WebApplication + HowTo + FAQPage for Google Rich Snippets) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Mahsua YTLab — YouTube Thumbnail, Description & Tag Extractor",
+        "url": "https://ytlab.mahsua.com/",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "All",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mahsua Technology",
+          "url": "https://technology.mahsua.com"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Free browser-based YouTube Thumbnail Downloader, Description Extractor, and SEO Tag Inspector by Mahsua Technology supporting watch links, youtu.be URLs, and YouTube Shorts."
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to Download a YouTube Thumbnail, Description, and Tags on Mahsua YTLab",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Copy the YouTube Video URL",
+            "text": "Open the YouTube video, Short, or livestream and copy its full link from the address bar or Share menu."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Paste the URL & Extract Data",
+            "text": "Paste the copied YouTube link into the Mahsua YTLab input box at ytlab.mahsua.com and click Extract Data."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Save HD Thumbnails, Description & Tags",
+            "text": "Download the 1280x720 MaxRes JPG thumbnail, copy the video description or timestamps, and export tags as comma-separated text or CSV."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the highest resolution YouTube thumbnail I can download on Mahsua YTLab?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can download the Maximum Resolution (maxresdefault.jpg) file at 1280×720 pixels (16:9 HD), as well as Standard Definition (640×480), High Quality (480×360), and Medium Quality (320×180)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Mahsua YTLab work for YouTube Shorts and youtu.be links?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our parser supports standard watch URLs (youtube.com/watch?v=...), shortened links (youtu.be/...), YouTube Shorts (youtube.com/shorts/...), and embed links."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the 500-character YouTube tag limit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "YouTube Studio allows up to 500 characters in total across all video tags. Mahsua YTLab automatically counts your tag characters so your tag list stays within the 500-character limit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I see the hidden tags and full description of any YouTube video?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "YouTube hides raw video tags from the public watch page. By clicking API Key Setup and pasting a free YouTube Data API v3 key, you can pull the exact hidden creator tags and complete description directly from YouTube's public record."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .tag-chip {
+      transition: all 0.15s ease;
+    }
+    .tag-chip:hover {
+      transform: translateY(-1px);
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f8fafc;
+    }
+    .dark ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #334155;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-pink-50/60 via-sky-50/50 to-emerald-50/60 text-slate-800 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-200 selection:bg-pink-600 selection:text-white">
+
+  <!-- Top Tri-Color Brand Accent Line (Pink, Blue, Green) -->
+  <div class="h-1.5 w-full bg-gradient-to-r from-pink-500 via-blue-600 to-emerald-500"></div>
+
+  <!-- Toast Notification -->
+  <div id="toastContainer" class="fixed bottom-4 right-4 left-4 sm:left-auto z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- API Key Setup Modal -->
+  <div id="apiKeyModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/50 dark:bg-slate-950/80 backdrop-blur-sm p-3 sm:p-4">
+    <div class="bg-white dark:bg-slate-900 border border-pink-200 dark:border-slate-800 rounded-2xl max-w-lg w-full p-4 sm:p-6 shadow-xl max-h-[90vh] overflow-y-auto">
+      <div class="flex items-start sm:items-center justify-between gap-2 pb-3.5 border-b border-slate-200 dark:border-slate-800">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 shrink-0 rounded-lg bg-gradient-to-br from-pink-500/15 via-blue-500/15 to-emerald-500/15 border border-blue-200 dark:border-blue-500/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white">YouTube Data API v3 Key (Optional)</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Unlock live full descriptions & exact creator tags for any video</p>
+          </div>
+        </div>
+        <button id="closeApiModalBtn" class="text-slate-400 hover:text-slate-700 dark:hover:text-white p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="py-4 space-y-4 text-sm">
+        <div class="bg-gradient-to-r from-pink-50/70 via-blue-50/70 to-emerald-50/70 dark:from-slate-950 dark:via-slate-950 dark:to-slate-950 border border-blue-200/70 dark:border-slate-800 rounded-xl p-3.5 text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+          <p class="font-semibold text-slate-900 dark:text-slate-200 mb-1">How Mahsua YTLab works on GitHub Pages ($0 Backend):</p>
+          <ul class="list-disc pl-4 space-y-1 text-slate-600 dark:text-slate-400">
+            <li><strong class="text-pink-700 dark:text-pink-300">Without API Key:</strong> All 4 HD Thumbnails (MaxRes 1080p, 720p, 480p, 360p), Video Title, Channel Name, and Smart SEO Tag Generator work immediately for free.</li>
+            <li><strong class="text-emerald-700 dark:text-emerald-300">With Free Google API Key:</strong> Directly fetches the exact full video description, exact hidden creator tags, view count, and like count from Google's official API (10,000 free requests/day).</li>
+          </ul>
+        </div>
+
+        <div>
+          <label for="apiKeyInput" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-2">Paste Your YouTube Data API v3 Key</label>
+          <input
+            id="apiKeyInput"
+            type="password"
+            placeholder="AIzaSy..."
+            class="w-full px-3.5 py-2.5 rounded-lg bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-blue-600 text-sm font-mono"
+          />
+          <p id="apiKeySavedStatus" class="text-xs text-emerald-600 dark:text-emerald-400 mt-1.5 hidden">API Key is saved locally in your browser.</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 pt-2">
+          <button id="clearApiKeyBtn" class="text-xs text-pink-600 dark:text-pink-400 hover:underline font-medium px-3 py-2 rounded-lg text-center">
+            Remove Saved Key
+          </button>
+          <div class="flex items-center gap-2">
+            <button id="cancelApiModalBtn" class="flex-1 sm:flex-initial px-4 py-2.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200">
+              Cancel
+            </button>
+            <button id="saveApiKeyBtn" class="flex-1 sm:flex-initial px-4 py-2.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-pink-600 via-blue-600 to-emerald-600 hover:opacity-95 text-white shadow-sm">
+              Save Key & Apply
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Navigation Bar (Mobile Responsive + SEO Jump Links) -->
+  <header class="sticky top-0 z-30 border-b border-pink-200/70 dark:border-slate-800 bg-white/95 dark:bg-slate-950/90 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-3 sm:px-6 py-2.5 sm:py-3 flex flex-wrap items-center justify-between gap-2">
+      <!-- Brand Logo (Mahsua YTLab) -->
+      <a href="https://ytlab.mahsua.com/" class="flex items-center gap-2.5 min-w-0 group">
+        <div class="w-9 h-9 shrink-0 rounded-xl bg-gradient-to-br from-pink-600 via-blue-600 to-emerald-600 flex items-center justify-center text-white shadow-sm">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+          </svg>
+        </div>
+        <div class="min-w-0">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            <span class="font-bold text-sm sm:text-lg tracking-tight text-slate-900 dark:text-white truncate">
+              Mahsua <span class="text-pink-600 dark:text-pink-400">YT</span><span class="text-blue-600 dark:text-blue-400">Lab</span>
+            </span>
+            <span class="hidden xl:inline-block text-[10px] font-semibold lowercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/30 font-mono">
+              ytlab.mahsua.com
+            </span>
+          </div>
+          <p class="text-[11px] text-slate-500 dark:text-slate-400 hidden sm:block truncate">
+            YouTube Thumbnail, Description &amp; Tags Extractor
+          </p>
+        </div>
+      </a>
+
+      <!-- In-Page SEO Navigation Links -->
+      <nav aria-label="Page Sections" class="hidden md:flex items-center gap-4 text-xs font-semibold text-slate-600 dark:text-slate-300">
+        <a href="#toolWorkspace" class="hover:text-pink-600 dark:hover:text-pink-400 transition">Extractor Tool</a>
+        <a href="#howItWorksSection" class="hover:text-blue-600 dark:hover:text-blue-400 transition">How It Works</a>
+        <a href="#resolutionGuideSection" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Size Guide</a>
+        <a href="#faqSection" class="hover:text-pink-600 dark:hover:text-pink-400 transition">FAQ</a>
+      </nav>
+
+      <!-- Action Controls (Compact & Mobile Responsive) -->
+      <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+        <!-- Theme Toggle Button (Default Light Mode) -->
+        <button
+          id="themeToggleBtn"
+          type="button"
+          title="Switch Light / Dark Theme"
+          class="flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-lg text-xs font-semibold bg-pink-50 hover:bg-pink-100 dark:bg-slate-900 dark:hover:bg-slate-800 text-pink-700 dark:text-pink-300 border border-pink-200 dark:border-slate-700 transition"
+        >
+          <svg id="themeMoonIcon" class="w-4 h-4 text-pink-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <svg id="themeSunIcon" class="w-4 h-4 text-amber-400 hidden shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <span id="themeToggleLabel">Dark Mode</span>
+        </button>
+
+        <button
+          id="openApiModalBtn"
+          type="button"
+          class="flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-lg text-xs font-semibold bg-blue-50 hover:bg-blue-100 dark:bg-slate-900 dark:hover:bg-slate-800 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-slate-700 transition"
+        >
+          <span id="apiIndicatorDot" class="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
+          <span id="apiIndicatorText">API Key Setup</span>
+        </button>
+
+        <a
+          href="#businessCtaSection"
+          class="hidden lg:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition"
+        >
+          Hire Mahsua Tech
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="toolWorkspace" class="flex-1 max-w-6xl w-full mx-auto px-3 sm:px-6 py-4 sm:py-6 space-y-5 sm:space-y-6">
+
+    <!-- Top Google AdSense Responsive Display Ad Unit (ca-pub-9351361840615541) -->
+    <div id="adSlotBanner" class="w-full rounded-xl border border-blue-200/80 dark:border-slate-800 bg-white/90 dark:bg-slate-900/50 p-2 sm:p-3 overflow-hidden text-center">
+      <div class="text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">Advertisement</div>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-9351361840615541"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+
+    <!-- Hero Input Card (Primary H1 & Search-Intent Keywords) -->
+    <section class="bg-white dark:bg-slate-900 border border-pink-200/80 dark:border-slate-800 rounded-2xl p-4 sm:p-6 shadow-sm">
+      <div class="max-w-3xl mx-auto text-center space-y-2.5">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-pink-100 via-blue-100 to-emerald-100 dark:from-pink-950/60 dark:via-blue-950/60 dark:to-emerald-950/60 border border-blue-200/70 dark:border-slate-700 text-[11px] font-semibold text-blue-800 dark:text-blue-300">
+          <span class="w-2 h-2 rounded-full bg-pink-500"></span>
+          <span>HD Thumbnail Grabber</span>
+          <span>•</span>
+          <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+          <span>Description Copy</span>
+          <span>•</span>
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>SEO Tag Extractor</span>
+        </div>
+
+        <h1 class="text-lg sm:text-2xl md:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
+          Mahsua YTLab — Free YouTube Thumbnail Downloader, Description &amp; Tag Extractor
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          Paste any YouTube video, Shorts, or <code class="px-1.5 py-0.5 rounded bg-pink-50 dark:bg-slate-800 text-pink-700 dark:text-pink-300 border border-pink-200 dark:border-slate-700">youtu.be</code> URL below to download watermark-free HD thumbnails (up to 1280×720), copy full video descriptions and timestamps, and extract hidden SEO tags.
+        </p>
+
+        <!-- URL Search Bar (Fully Responsive on Mobile) -->
+        <div class="pt-2 flex flex-col sm:flex-row gap-2">
+          <div class="relative flex-1 min-w-0">
+            <input
+              id="ytUrlInput"
+              type="url"
+              value=""
+              aria-label="YouTube Video URL"
+              placeholder="Paste YouTube video or Shorts link here..."
+              class="w-full pl-9 pr-9 py-3 rounded-xl bg-slate-50/70 dark:bg-slate-950 border border-blue-300 dark:border-slate-700 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/15"
+            />
+            <svg class="w-4 h-4 text-blue-500 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            </svg>
+            <button
+              id="clearInputBtn"
+              type="button"
+              title="Clear URL"
+              class="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-pink-600 dark:hover:text-pink-400 p-1 rounded"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="grid grid-cols-2 sm:flex gap-2">
+            <button
+              id="pasteClipboardBtn"
+              type="button"
+              class="px-3.5 py-3 rounded-xl bg-blue-50 hover:bg-blue-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-blue-700 dark:text-blue-300 text-xs sm:text-sm font-semibold border border-blue-200 dark:border-slate-700 transition flex items-center justify-center gap-1.5"
+            >
+              <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              </svg>
+              <span>Paste</span>
+            </button>
+            <button
+              id="extractBtn"
+              type="button"
+              class="px-5 py-3 rounded-xl bg-gradient-to-r from-pink-600 via-blue-600 to-emerald-600 hover:opacity-95 text-white font-semibold text-xs sm:text-sm shadow-sm transition flex items-center justify-center gap-1.5"
+            >
+              <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <span>Extract Data</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Supported Formats Trust Strip -->
+        <div class="pt-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-slate-500 dark:text-slate-400">
+          <span class="inline-flex items-center gap-1"><span class="text-pink-600 font-bold">✓</span> No Watermark</span>
+          <span class="inline-flex items-center gap-1"><span class="text-blue-600 font-bold">✓</span> Supports Videos, Shorts &amp; Live</span>
+          <span class="inline-flex items-center gap-1"><span class="text-emerald-600 font-bold">✓</span> 100% Free &amp; No Login Required</span>
+        </div>
+
+        <!-- Validation Error Banner -->
+        <div id="errorBanner" class="hidden mt-3 p-3 rounded-xl bg-pink-50 dark:bg-pink-500/15 border border-pink-300 dark:border-pink-500/30 text-pink-800 dark:text-pink-300 text-xs text-left flex items-center justify-between gap-2">
+          <span id="errorBannerText">Please paste a valid YouTube video URL (watch, shorts, or youtu.be link).</span>
+          <button id="dismissErrorBtn" type="button" class="text-pink-700 dark:text-pink-300 hover:underline font-bold px-1">✕</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMPTY / BLANK STATE ON INITIAL LOAD (Shown when no video link has been extracted yet) -->
+    <section id="emptyStateSection" class="bg-white dark:bg-slate-900 border border-blue-200/80 dark:border-slate-800 rounded-2xl p-5 sm:p-8 text-center shadow-sm space-y-4">
+      <div class="w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-pink-500/15 via-blue-500/15 to-emerald-500/15 border border-blue-200 dark:border-slate-700 flex items-center justify-center">
+        <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+        </svg>
+      </div>
+
+      <div class="max-w-md mx-auto space-y-1">
+        <h2 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+          Ready to Extract — Paste a YouTube Link Above
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+          No video is loaded yet. Enter any YouTube video or Shorts URL above and tap <strong>Extract Data</strong> to view and download its thumbnails, description, and tags.
+        </p>
+      </div>
+    </section>
+
+    <!-- RESULTS WORKSPACE (Hidden on load until user extracts a video link) -->
+    <div id="resultsContainer" class="hidden space-y-4 sm:space-y-5">
+
+      <!-- Navigation Tabs (Mobile Grid / Desktop Row with Pink, Blue, Green Accents) -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-1.5 w-full sm:w-auto" role="tablist">
+          <button
+            data-tab="thumbnails"
+            class="tab-btn px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-1.5 bg-pink-600 text-white shadow-sm"
+          >
+            <span>1. HD Thumbnails</span>
+            <span class="px-1.5 py-0.5 text-[10px] rounded bg-white/20 text-white">4 Sizes</span>
+          </button>
+          <button
+            data-tab="description"
+            class="tab-btn px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-1.5 bg-white hover:bg-blue-50 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border border-blue-200 dark:border-slate-800"
+          >
+            <span>2. Video Description</span>
+          </button>
+          <button
+            data-tab="tags"
+            class="tab-btn px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-1.5 bg-white hover:bg-emerald-50 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border border-emerald-200 dark:border-slate-800"
+          >
+            <span>3. Video Tags &amp; SEO</span>
+            <span id="tagCountBadge" class="px-1.5 py-0.5 text-[10px] rounded bg-emerald-100 dark:bg-slate-800 text-emerald-800 dark:text-emerald-300">0</span>
+          </button>
+        </div>
+
+        <div class="flex items-center justify-end gap-2">
+          <button
+            id="exportJsonBtn"
+            type="button"
+            class="px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold flex items-center justify-center gap-1.5 shadow-sm transition"
+          >
+            <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            <span>Export SEO Report (.txt)</span>
+          </button>
+          <button
+            id="resetWorkspaceBtn"
+            type="button"
+            class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-semibold transition"
+          >
+            Clear / Reset
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB 1: THUMBNAILS (Pink Accent Theme) -->
+      <section id="tab-thumbnails" class="tab-panel space-y-4 sm:space-y-5">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5">
+          <!-- Main HD Preview & Download Card -->
+          <div class="lg:col-span-7 bg-white dark:bg-slate-900 border border-pink-200 dark:border-slate-800 rounded-2xl p-3.5 sm:p-5 shadow-sm space-y-3.5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-pink-600 dark:text-pink-400">Selected Resolution</span>
+                <h3 id="activeThumbLabel" class="text-sm sm:text-base font-bold text-slate-900 dark:text-white">Max Resolution HD (1280 × 720)</h3>
+              </div>
+              <div class="grid grid-cols-2 sm:flex items-center gap-2">
+                <button
+                  id="copyThumbUrlBtn"
+                  type="button"
+                  class="px-3 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-blue-700 dark:text-blue-300 text-xs font-semibold border border-blue-200 dark:border-slate-700 transition text-center"
+                >
+                  Copy Image Link
+                </button>
+                <button
+                  id="downloadActiveThumbBtn"
+                  type="button"
+                  class="px-3.5 py-2 rounded-xl bg-pink-600 hover:bg-pink-700 text-white text-xs font-semibold shadow-sm flex items-center justify-center gap-1.5 transition"
+                >
+                  <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  <span>Download JPG</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-950 border border-pink-200/70 dark:border-slate-800 aspect-video flex items-center justify-center">
+              <img
+                id="mainThumbPreview"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                alt="Main YouTube Thumbnail Preview"
+                class="w-full h-full object-cover max-w-full"
+              />
+              <div class="absolute bottom-2.5 right-2.5 px-2.5 py-1 rounded-lg bg-white/90 dark:bg-slate-950/85 backdrop-blur-sm border border-pink-200 dark:border-slate-700 text-[11px] font-mono text-pink-700 dark:text-pink-300 shadow-sm" id="activeThumbCode">
+                maxresdefault.jpg
+              </div>
+            </div>
+
+            <!-- Direct URL Box -->
+            <div class="flex items-center gap-2 bg-pink-50/50 dark:bg-slate-950 border border-pink-200/80 dark:border-slate-800 rounded-xl px-3 py-2">
+              <span class="text-[11px] font-semibold text-pink-700 dark:text-pink-300 shrink-0">Direct URL:</span>
+              <input
+                id="directThumbUrlInput"
+                type="text"
+                readonly
+                value=""
+                class="w-full bg-transparent text-xs text-slate-700 dark:text-slate-300 font-mono focus:outline-none min-w-0"
+              />
+            </div>
+          </div>
+
+          <!-- All 4 Qualities Selector Grid -->
+          <div class="lg:col-span-5 bg-white dark:bg-slate-900 border border-blue-200 dark:border-slate-800 rounded-2xl p-3.5 sm:p-5 shadow-sm flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <h3 class="text-xs font-bold uppercase tracking-wider text-blue-700 dark:text-blue-400">Available Thumbnail Sizes (4 Qualities)</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400">Tap any size below to preview or download directly to your mobile or PC:</p>
+              <div id="thumbQualitiesList" class="space-y-2.5"></div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-emerald-50/70 dark:bg-slate-950 border border-emerald-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 space-y-1">
+              <div class="font-semibold text-emerald-800 dark:text-emerald-300 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span>Zero Server Bandwidth Cost</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Thumbnails are fetched directly from <code class="text-blue-700 dark:text-blue-400 font-semibold">i.ytimg.com</code> inside the browser—ideal for hosting <code class="font-mono text-pink-600 dark:text-pink-400">ytlab.mahsua.com</code> on GitHub Pages.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: DESCRIPTION (Blue Accent Theme) -->
+      <section id="tab-description" class="tab-panel hidden space-y-4 sm:space-y-5">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5">
+          <div class="lg:col-span-8 bg-white dark:bg-slate-900 border border-blue-200 dark:border-slate-800 rounded-2xl p-3.5 sm:p-5 shadow-sm space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+              <div>
+                <h3 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white">Video Title &amp; Full Description</h3>
+                <p id="descSourceSubtext" class="text-xs text-slate-500 dark:text-slate-400">Copy the complete video description, timestamps, and links below.</p>
+              </div>
+              <div class="grid grid-cols-1 sm:flex items-center gap-1.5 sm:gap-2">
+                <button
+                  id="copyTitleBtn"
+                  type="button"
+                  class="px-3 py-2 rounded-xl bg-pink-50 hover:bg-pink-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-pink-700 dark:text-pink-300 text-xs font-semibold border border-pink-200 dark:border-slate-700 transition text-center"
+                >
+                  Copy Title
+                </button>
+                <button
+                  id="copyDescBtn"
+                  type="button"
+                  class="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-sm transition text-center"
+                >
+                  Copy Full Description
+                </button>
+                <button
+                  id="downloadDescTxtBtn"
+                  type="button"
+                  class="px-3 py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-emerald-700 dark:text-emerald-300 text-xs font-semibold border border-emerald-200 dark:border-slate-700 transition text-center"
+                >
+                  Save .txt
+                </button>
+              </div>
+            </div>
+
+            <!-- Video Title Field -->
+            <div>
+              <label class="block text-[11px] font-semibold uppercase tracking-wider text-blue-700 dark:text-blue-400 mb-1">Video Title</label>
+              <input
+                id="descTitleField"
+                type="text"
+                readonly
+                value=""
+                class="w-full px-3.5 py-2.5 rounded-xl bg-blue-50/40 dark:bg-slate-950 border border-blue-200 dark:border-slate-800 text-xs sm:text-sm font-semibold text-slate-900 dark:text-white focus:outline-none"
+              />
+            </div>
+
+            <!-- Description Textarea -->
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <label for="descriptionTextarea" class="text-[11px] font-semibold uppercase tracking-wider text-blue-700 dark:text-blue-400">Description Text (Editable)</label>
+                <span id="descStatsCounter" class="text-[11px] font-mono text-emerald-700 dark:text-emerald-400">0 words • 0 chars</span>
+              </div>
+              <textarea
+                id="descriptionTextarea"
+                rows="10"
+                class="w-full p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-blue-200 dark:border-slate-800 text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-mono leading-relaxed focus:outline-none focus:border-blue-600"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Extracted Links & Timestamps Side Panel -->
+          <div class="lg:col-span-4 space-y-4">
+            <div class="bg-white dark:bg-slate-900 border border-pink-200 dark:border-slate-800 rounded-2xl p-3.5 sm:p-5 shadow-sm space-y-3">
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white flex items-center justify-between">
+                <span class="text-pink-700 dark:text-pink-300">Timestamps / Chapters</span>
+                <span id="timestampCountBadge" class="text-xs px-2 py-0.5 rounded-full bg-pink-100 dark:bg-slate-800 text-pink-700 dark:text-pink-300">0</span>
+              </h4>
+              <div id="timestampsList" class="space-y-1.5 max-h-44 overflow-y-auto text-xs text-slate-700 dark:text-slate-300"></div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-emerald-200 dark:border-slate-800 rounded-2xl p-3.5 sm:p-5 shadow-sm space-y-3">
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white flex items-center justify-between">
+                <span class="text-emerald-700 dark:text-emerald-300">Links in Description</span>
+                <span id="linksCountBadge" class="text-xs px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-slate-800 text-emerald-700 dark:text-emerald-300">0</span>
+              </h4>
+              <div id="extractedLinksList" class="space-y-1.5 max-h-44 overflow-y-auto text-xs text-slate-700 dark:text-slate-300"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: TAGS & SEO (Green Accent Theme + CSV Export) -->
+      <section id="tab-tags" class="tab-panel hidden space-y-4 sm:space-y-5">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5">
+          <div class="lg:col-span-8 bg-white dark:bg-slate-900 border border-emerald-200 dark:border-slate-800 rounded-2xl p-3.5 sm:p-5 shadow-sm space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+              <div>
+                <h3 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white">Extracted Video Tags &amp; Keywords</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Tap any tag chip to copy it, or export all tags for YouTube Studio.</p>
+              </div>
+              <div class="grid grid-cols-1 sm:flex flex-wrap items-center gap-2">
+                <button
+                  id="copyAllTagsCommaBtn"
+                  type="button"
+                  class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold shadow-sm transition text-center"
+                >
+                  Copy All Tags (Comma)
+                </button>
+                <button
+                  id="copyAllHashtagsBtn"
+                  type="button"
+                  class="px-3 py-2 rounded-xl bg-pink-50 hover:bg-pink-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-pink-700 dark:text-pink-300 text-xs font-semibold border border-pink-200 dark:border-slate-700 transition text-center"
+                >
+                  Copy as #Hashtags
+                </button>
+                <button
+                  id="exportTagsCsvBtn"
+                  type="button"
+                  class="px-3 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-blue-700 dark:text-blue-300 text-xs font-semibold border border-blue-200 dark:border-slate-700 transition text-center"
+                >
+                  Export CSV
+                </button>
+              </div>
+            </div>
+
+            <!-- Tag Chips Container -->
+            <div id="tagsChipContainer" class="flex flex-wrap gap-2 pt-1 min-h-[110px] items-start content-start p-3 rounded-xl bg-emerald-50/40 dark:bg-slate-950 border border-emerald-200 dark:border-slate-800"></div>
+
+            <!-- Add Custom Tag & Comma Output -->
+            <div class="space-y-2.5 pt-1">
+              <div class="flex flex-col sm:flex-row gap-2">
+                <input
+                  id="customTagInput"
+                  type="text"
+                  placeholder="Add your own custom tag (e.g., mahsua tech)..."
+                  class="flex-1 px-3.5 py-2.5 rounded-xl bg-white dark:bg-slate-950 border border-blue-200 dark:border-slate-800 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-emerald-600"
+                />
+                <button
+                  id="addCustomTagBtn"
+                  type="button"
+                  class="px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-sm transition"
+                >
+                  + Add Tag
+                </button>
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[11px] font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Comma-Separated List (YouTube Studio Limit: 500 chars)</span>
+                  <span id="tagCharLimitBadge" class="text-[11px] font-mono text-emerald-700 dark:text-emerald-400">0 / 500 chars</span>
+                </div>
+                <textarea
+                  id="rawTagsTextarea"
+                  rows="3"
+                  readonly
+                  class="w-full p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-emerald-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-mono focus:outline-none"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- SEO Score & Creator Tips -->
+          <div class="lg:col-span-4 bg-white dark:bg-slate-900 border border-blue-200 dark:border-slate-800 rounded-2xl p-3.5 sm:p-5 shadow-sm space-y-4">
+            <h4 class="text-sm font-bold text-slate-900 dark:text-white">YouTube Tag SEO Checklist</h4>
+            <div id="seoChecklistContainer" class="space-y-2.5 text-xs"></div>
+
+            <div class="p-3.5 rounded-xl bg-gradient-to-br from-pink-50 via-blue-50 to-emerald-50 dark:from-slate-950 dark:via-slate-950 dark:to-slate-950 border border-blue-200 dark:border-slate-800 space-y-1.5 text-xs">
+              <div class="font-bold text-blue-800 dark:text-blue-300">Want 100% Hidden Tags on Any Link?</div>
+              <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                YouTube hides raw tags from public web embeds. Tap <strong>API Key Setup</strong> in the top bar and paste a free Google YouTube Data API v3 key to pull live hidden tags on any video URL.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Mid-Page Google AdSense Responsive Display Ad Unit (ca-pub-9351361840615541) -->
+    <div id="adSlotMidPage" class="w-full rounded-xl border border-pink-200/80 dark:border-slate-800 bg-white/90 dark:bg-slate-900/50 p-2 sm:p-3 overflow-hidden text-center">
+      <div class="text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">Sponsored Advertisement</div>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-9351361840615541"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+
+    <!-- SEO SECTION 1: HOW IT WORKS IN 3 EASY STEPS -->
+    <section id="howItWorksSection" class="bg-white dark:bg-slate-900 border border-pink-200/80 dark:border-slate-800 rounded-2xl p-4 sm:p-6 shadow-sm space-y-4">
+      <div class="text-center max-w-2xl mx-auto space-y-1">
+        <span class="text-[11px] font-bold uppercase tracking-wider text-pink-600 dark:text-pink-400">Step-by-Step Guide</span>
+        <h2 class="text-base sm:text-xl font-bold text-slate-900 dark:text-white">
+          How to Download YouTube Thumbnails, Descriptions &amp; Tags on Mahsua YTLab
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+          Our client-side YouTube metadata extractor works on Android, iPhone, Windows, and Mac with zero software installation.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1">
+        <article class="p-4 rounded-xl bg-pink-50/70 dark:bg-pink-950/20 border border-pink-200 dark:border-pink-900/40 space-y-1.5">
+          <div class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-pink-600 text-white font-bold text-xs">1</div>
+          <h3 class="text-sm font-bold text-slate-900 dark:text-white">Copy the YouTube Video Link</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            Open the YouTube video, YouTube Short, or livestream you want to inspect and copy its URL from the browser address bar or the <strong>Share → Copy Link</strong> button.
+          </p>
+        </article>
+
+        <article class="p-4 rounded-xl bg-blue-50/70 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900/40 space-y-1.5">
+          <div class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-blue-600 text-white font-bold text-xs">2</div>
+          <h3 class="text-sm font-bold text-slate-900 dark:text-white">Paste URL &amp; Click Extract Data</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            Paste the link into the search box above and click <strong>Extract Data</strong>. Our engine parses the 11-character video ID and retrieves all 4 thumbnail sizes, title, description, and tags.
+          </p>
+        </article>
+
+        <article class="p-4 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/40 space-y-1.5">
+          <div class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-emerald-600 text-white font-bold text-xs">3</div>
+          <h3 class="text-sm font-bold text-slate-900 dark:text-white">Download HD JPG, .TXT or CSV</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            Save the unwatermarked <strong>1280×720 MaxRes</strong> thumbnail as a JPG, copy the video description and timestamps, or export the tag list to CSV for your own YouTube Studio research.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEO SECTION 2: YOUTUBE THUMBNAIL RESOLUTION & METADATA REFERENCE TABLE -->
+    <section id="resolutionGuideSection" class="bg-white dark:bg-slate-900 border border-blue-200/80 dark:border-slate-800 rounded-2xl p-4 sm:p-6 shadow-sm space-y-4">
+      <div class="space-y-1">
+        <span class="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Technical SEO Reference</span>
+        <h2 class="text-base sm:text-xl font-bold text-slate-900 dark:text-white">
+          YouTube Thumbnail Resolution Sizes &amp; 500-Character Tag Limit Guide
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+          YouTube stores four standard thumbnail image files for every uploaded video and enforces a 500-character limit on video tags in YouTube Studio.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="bg-gradient-to-r from-pink-50 via-blue-50 to-emerald-50 dark:from-slate-800 dark:via-slate-800 dark:to-slate-800 text-slate-800 dark:text-slate-200 border-b border-slate-200 dark:border-slate-700">
+              <th class="py-3 px-3.5 font-bold">Quality Name</th>
+              <th class="py-3 px-3.5 font-bold">File Code</th>
+              <th class="py-3 px-3.5 font-bold">Dimensions</th>
+              <th class="py-3 px-3.5 font-bold">Aspect Ratio</th>
+              <th class="py-3 px-3.5 font-bold">Best Use Case</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+            <tr>
+              <td class="py-2.5 px-3.5 font-semibold text-pink-700 dark:text-pink-300">Maximum Resolution (Full HD)</td>
+              <td class="py-2.5 px-3.5 font-mono">maxresdefault.jpg</td>
+              <td class="py-2.5 px-3.5 font-mono">1280 × 720 px</td>
+              <td class="py-2.5 px-3.5">16:9 Widescreen</td>
+              <td class="py-2.5 px-3.5">Design swipe files, full-width blog embeds &amp; HD reference</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3.5 font-semibold text-blue-700 dark:text-blue-300">Standard Definition (SD)</td>
+              <td class="py-2.5 px-3.5 font-mono">sddefault.jpg</td>
+              <td class="py-2.5 px-3.5 font-mono">640 × 480 px</td>
+              <td class="py-2.5 px-3.5">4:3 Frame</td>
+              <td class="py-2.5 px-3.5">Medium web previews &amp; older video uploads</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3.5 font-semibold text-emerald-700 dark:text-emerald-300">High Quality (HQ Default)</td>
+              <td class="py-2.5 px-3.5 font-mono">hqdefault.jpg</td>
+              <td class="py-2.5 px-3.5 font-mono">480 × 360 px</td>
+              <td class="py-2.5 px-3.5">4:3 Frame</td>
+              <td class="py-2.5 px-3.5">Guaranteed fallback thumbnail available on 100% of videos</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3.5 font-semibold text-slate-800 dark:text-slate-200">Medium Quality (MQ)</td>
+              <td class="py-2.5 px-3.5 font-mono">mqdefault.jpg</td>
+              <td class="py-2.5 px-3.5 font-mono">320 × 180 px</td>
+              <td class="py-2.5 px-3.5">16:9 Widescreen</td>
+              <td class="py-2.5 px-3.5">Fast mobile cards &amp; lightweight playlist thumbnails</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SEO SECTION 3: FREQUENTLY ASKED QUESTIONS (Interactive Accordion Matching Schema.org FAQPage) -->
+    <section id="faqSection" class="bg-white dark:bg-slate-900 border border-emerald-200/80 dark:border-slate-800 rounded-2xl p-4 sm:p-6 shadow-sm space-y-4">
+      <div class="space-y-1">
+        <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Frequently Asked Questions</span>
+        <h2 class="text-base sm:text-xl font-bold text-slate-900 dark:text-white">
+          Everything You Need to Know About Mahsua YTLab
+        </h2>
+      </div>
+
+      <div id="faqAccordionList" class="space-y-2.5">
+        <div class="faq-item rounded-xl border border-pink-200/80 dark:border-slate-800 bg-pink-50/30 dark:bg-slate-950/60 overflow-hidden">
+          <button type="button" class="faq-toggle-btn w-full px-4 py-3 text-left flex items-center justify-between gap-2 text-xs sm:text-sm font-bold text-slate-900 dark:text-white">
+            <span>1. What is the highest resolution YouTube thumbnail I can download?</span>
+            <span class="faq-icon text-pink-600 font-bold text-base">−</span>
+          </button>
+          <div class="faq-answer px-4 pb-3.5 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            When a creator uploads a high-resolution cover image, YouTube stores it as <code class="font-mono text-pink-700 dark:text-pink-300">maxresdefault.jpg</code> at <strong>1280×720 pixels (16:9 HD)</strong>. Mahsua YTLab grabs that original, unwatermarked JPEG file directly from YouTube's image servers, along with 640×480 (SD), 480×360 (HQ), and 320×180 (MQ) versions.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-xl border border-blue-200/80 dark:border-slate-800 bg-blue-50/30 dark:bg-slate-950/60 overflow-hidden">
+          <button type="button" class="faq-toggle-btn w-full px-4 py-3 text-left flex items-center justify-between gap-2 text-xs sm:text-sm font-bold text-slate-900 dark:text-white">
+            <span>2. Why are YouTube video tags hidden, and how does Mahsua YTLab find them?</span>
+            <span class="faq-icon text-blue-600 font-bold text-base">+</span>
+          </button>
+          <div class="faq-answer hidden px-4 pb-3.5 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            YouTube hides video meta tags on the public watch page, even though they remain part of the video's public metadata record. Mahsua YTLab generates smart SEO tags automatically from the video title and channel, and if you add a free <strong>YouTube Data API v3 key</strong> in the top bar, it pulls the exact hidden tag list and full multi-line description directly from YouTube's official API.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-xl border border-emerald-200/80 dark:border-slate-800 bg-emerald-50/30 dark:bg-slate-950/60 overflow-hidden">
+          <button type="button" class="faq-toggle-btn w-full px-4 py-3 text-left flex items-center justify-between gap-2 text-xs sm:text-sm font-bold text-slate-900 dark:text-white">
+            <span>3. Does Mahsua YTLab work for YouTube Shorts and youtu.be links?</span>
+            <span class="faq-icon text-emerald-600 font-bold text-base">+</span>
+          </button>
+          <div class="faq-answer hidden px-4 pb-3.5 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            Yes! You can paste standard watch links (<code class="font-mono">youtube.com/watch?v=...</code>), mobile share links (<code class="font-mono">youtu.be/...</code>), YouTube Shorts links (<code class="font-mono">youtube.com/shorts/...</code>), or livestream links.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-xl border border-pink-200/80 dark:border-slate-800 bg-pink-50/30 dark:bg-slate-950/60 overflow-hidden">
+          <button type="button" class="faq-toggle-btn w-full px-4 py-3 text-left flex items-center justify-between gap-2 text-xs sm:text-sm font-bold text-slate-900 dark:text-white">
+            <span>4. What is the 500-character YouTube Studio tag limit?</span>
+            <span class="faq-icon text-pink-600 font-bold text-base">+</span>
+          </button>
+          <div class="faq-answer hidden px-4 pb-3.5 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            YouTube Studio allows up to <strong>500 characters in total</strong> across all tags on a video. In the <strong>Video Tags &amp; SEO</strong> tab, our live counter tracks the exact character count out of 500 so you can add or remove tags before pasting them into YouTube Studio.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Google AdSense Responsive Display Ad Unit (ca-pub-9351361840615541) -->
+    <div id="adSlotFooter" class="w-full rounded-xl border border-emerald-200/80 dark:border-slate-800 bg-white/90 dark:bg-slate-900/50 p-2 sm:p-3 overflow-hidden text-center">
+      <div class="text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">Advertisement</div>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-9351361840615541"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+
+    <!-- Mahsua Technology Lead Generation & Monetization Footer Card -->
+    <section id="businessCtaSection" class="rounded-2xl bg-gradient-to-r from-pink-50 via-blue-50 to-emerald-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 border border-blue-200 dark:border-slate-800 p-4 sm:p-6 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div class="space-y-1.5 max-w-xl">
+        <span class="inline-block text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-white dark:bg-slate-800 text-pink-600 dark:text-pink-400 border border-pink-200 dark:border-slate-700">
+          Powered by Mahsua Technology
+        </span>
+        <h3 class="text-sm sm:text-lg font-bold text-slate-900 dark:text-white">
+          Need a Professional Website, Custom Web Tool, or Digital Seva Setup?
+        </h3>
+        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+          We build clean, mobile-friendly websites, business landing pages with Google Maps, and digital utilities for creators, schools, coaching institutes, and local businesses.
+        </p>
+      </div>
+      <div class="w-full md:w-auto shrink-0">
+        <button
+          id="copyBusinessPitchBtn"
+          type="button"
+          class="w-full md:w-auto px-4 py-2.5 rounded-xl bg-gradient-to-r from-pink-600 via-blue-600 to-emerald-600 hover:opacity-95 text-white font-semibold text-xs shadow-sm transition inline-flex items-center justify-center gap-2"
+        >
+          <span>Copy Inquiry Message</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-pink-200/60 dark:border-slate-900 bg-white/90 dark:bg-slate-950 py-5 px-3 text-center text-xs text-slate-600 dark:text-slate-400 space-y-2">
+    <div class="flex flex-wrap items-center justify-center gap-4 text-[11px] font-medium text-slate-600 dark:text-slate-400">
+      <a href="#toolWorkspace" class="hover:text-pink-600">YouTube Thumbnail Downloader</a>
+      <span>•</span>
+      <a href="#howItWorksSection" class="hover:text-blue-600">YouTube Description Extractor</a>
+      <span>•</span>
+      <a href="#resolutionGuideSection" class="hover:text-emerald-600">YouTube Tag Extractor</a>
+      <span>•</span>
+      <a href="#faqSection" class="hover:text-pink-600">SEO FAQ</a>
+    </div>
+    <p class="font-medium text-slate-700 dark:text-slate-300">
+      Design and developed by <a href="https://technology.mahsua.com" target="_blank" rel="noopener noreferrer" class="font-bold text-blue-600 dark:text-blue-400 hover:text-pink-600 dark:hover:text-pink-400 hover:underline transition">Mahsua Technology</a>
+    </p>
+  </footer>
+
+  <script>
+    const THUMB_QUALITIES = [
+      { code: 'maxresdefault', label: 'Max Resolution HD (1080p / 720p)', dims: '1280 × 720 px', badge: 'Best Quality' },
+      { code: 'sddefault', label: 'Standard Definition (480p)', dims: '640 × 480 px', badge: 'SD 4:3' },
+      { code: 'hqdefault', label: 'High Quality Default (360p)', dims: '480 × 360 px', badge: 'Always Available' },
+      { code: 'mqdefault', label: 'Medium Quality (180p Widescreen)', dims: '320 × 180 px', badge: 'Fast Preview' }
+    ];
+
+    // Everything starts completely blank on initial load (hasLoadedVideo: false)
+    const state = {
+      hasLoadedVideo: false,
+      videoId: '',
+      title: '',
+      channel: '',
+      stats: '',
+      sourceLabel: '',
+      description: '',
+      tags: [],
+      activeThumbCode: 'maxresdefault',
+      activeTab: 'thumbnails',
+      apiKey: '',
+      darkMode: false // Default is Light Mode
+    };
+
+    try {
+      const savedKey = localStorage.getItem('mahsua_yt_api_key');
+      if (savedKey) state.apiKey = savedKey.trim();
+      const savedTheme = localStorage.getItem('mahsua_yt_theme');
+      if (savedTheme === 'dark') {
+        state.darkMode = true;
+      }
+    } catch (e) {}
+
+    function initAdSenseUnits() {
+      const adUnits = document.querySelectorAll('ins.adsbygoogle');
+      adUnits.forEach(() => {
+        try {
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (err) {
+          // AdSense push safely handled when previewed before domain approval
+        }
+      });
+    }
+
+    function applyTheme() {
+      const root = document.documentElement;
+      const moonIcon = document.getElementById('themeMoonIcon');
+      const sunIcon = document.getElementById('themeSunIcon');
+      const label = document.getElementById('themeToggleLabel');
+
+      if (state.darkMode) {
+        root.classList.add('dark');
+        if (moonIcon) moonIcon.classList.add('hidden');
+        if (sunIcon) sunIcon.classList.remove('hidden');
+        if (label) label.textContent = 'Light Mode';
+      } else {
+        root.classList.remove('dark');
+        if (moonIcon) moonIcon.classList.remove('hidden');
+        if (sunIcon) sunIcon.classList.add('hidden');
+        if (label) label.textContent = 'Dark Mode';
+      }
+    }
+
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      const bgClass = type === 'error'
+        ? 'bg-pink-600 border-pink-500 text-white'
+        : 'bg-emerald-600 border-emerald-500 text-white';
+      toast.className = `pointer-events-auto px-4 py-2.5 rounded-xl border shadow-lg text-xs font-semibold flex items-center gap-2 transition-all ${bgClass}`;
+      toast.textContent = message;
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 250);
+      }, 2600);
+    }
+
+    function copyTextToClipboard(text, label = 'Copied to clipboard!') {
+      if (!text) {
+        showToast('Nothing to copy yet!', 'error');
+        return;
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(label);
+        }).catch(() => {
+          fallbackCopy(text, label);
+        });
+      } else {
+        fallbackCopy(text, label);
+      }
+    }
+
+    function fallbackCopy(text, label) {
+      const temp = document.createElement('textarea');
+      temp.value = text;
+      temp.style.position = 'fixed';
+      temp.style.opacity = '0';
+      document.body.appendChild(temp);
+      temp.select();
+      try {
+        document.execCommand('copy');
+        showToast(label);
+      } catch (err) {
+        showToast('Unable to copy automatically', 'error');
+      }
+      document.body.removeChild(temp);
+    }
+
+    // Parse any YouTube URL format or 11-character ID
+    function extractYouTubeId(input) {
+      if (!input) return null;
+      const trimmed = input.trim();
+      if (/^[a-zA-Z0-9_-]{11}$/.test(trimmed)) {
+        return trimmed;
+      }
+      const patterns = [
+        /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/v\/|youtube\.com\/shorts\/|youtube\.com\/live\/)([a-zA-Z0-9_-]{11})/,
+        /[?&]v=([a-zA-Z0-9_-]{11})/
+      ];
+      for (const pattern of patterns) {
+        const match = trimmed.match(pattern);
+        if (match && match[1]) return match[1];
+      }
+      return null;
+    }
+
+    // Generate smart SEO tags from title and channel when API key is not configured
+    function generateSmartTagsFromTitle(title, channel) {
+      const stopWords = new Set(['the', 'and', 'for', 'with', 'from', 'that', 'this', 'how', 'what', 'why', 'are', 'was', 'official', 'video']);
+      const cleanWords = title
+        .replace(/[^\w\s]/g, ' ')
+        .split(/\s+/)
+        .filter(w => w.length > 2 && !stopWords.has(w.toLowerCase()));
+
+      const tags = new Set();
+      if (channel && channel !== 'YouTube Creator') tags.add(channel);
+      if (cleanWords.length >= 2) tags.add(cleanWords.slice(0, 3).join(' '));
+      if (cleanWords.length >= 4) tags.add(cleanWords.slice(0, 2).join(' '));
+
+      cleanWords.slice(0, 8).forEach(word => {
+        tags.add(word);
+        tags.add(`${word.toLowerCase()} video`);
+      });
+
+      tags.add('YouTube HD');
+      tags.add('Trending Video');
+      return Array.from(tags).slice(0, 14);
+    }
+
+    async function loadVideoData(videoId) {
+      const extractBtn = document.getElementById('extractBtn');
+      const originalBtnHtml = extractBtn.innerHTML;
+      extractBtn.disabled = true;
+      extractBtn.innerHTML = '<span>Fetching...</span>';
+
+      state.hasLoadedVideo = true;
+      state.videoId = videoId;
+      state.activeThumbCode = 'maxresdefault';
+
+      // 1. If user provided a YouTube Data API v3 key, fetch full live snippet (title, description, tags)
+      if (state.apiKey) {
+        try {
+          const apiUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${encodeURIComponent(videoId)}&key=${encodeURIComponent(state.apiKey)}`;
+          const res = await fetch(apiUrl);
+          const data = await res.json();
+          if (data.items && data.items.length > 0) {
+            const item = data.items[0];
+            const snippet = item.snippet || {};
+            const stats = item.statistics || {};
+            state.title = snippet.title || `YouTube Video (${videoId})`;
+            state.channel = snippet.channelTitle || 'YouTube Creator';
+            const views = stats.viewCount ? `${Number(stats.viewCount).toLocaleString()} views` : 'Live API Data';
+            state.stats = views;
+            state.sourceLabel = 'Live YouTube Data API v3';
+            state.description = snippet.description || 'No description provided on this video.';
+            state.tags = Array.isArray(snippet.tags) && snippet.tags.length > 0
+              ? snippet.tags
+              : generateSmartTagsFromTitle(state.title, state.channel);
+            renderAll();
+            extractBtn.disabled = false;
+            extractBtn.innerHTML = originalBtnHtml;
+            showToast('Fetched live video data via YouTube API!');
+            return;
+          }
+        } catch (err) {
+          // Fall through to public oEmbed
+        }
+      }
+
+      // 2. Keyless public oEmbed lookup (fetches real title & channel name for any YouTube link without API key)
+      try {
+        const oembedUrl = `https://noembed.com/embed?url=https://www.youtube.com/watch?v=${encodeURIComponent(videoId)}`;
+        const response = await fetch(oembedUrl);
+        const oembed = await response.json();
+        if (oembed && oembed.title) {
+          state.title = oembed.title;
+          state.channel = oembed.author_name || 'YouTube Channel';
+          state.stats = 'All 4 Thumbnails Ready';
+          state.sourceLabel = 'Public oEmbed + Smart SEO Mode';
+          state.description = `${oembed.title}\nChannel: ${oembed.author_name || 'YouTube Creator'}\nVideo URL: https://www.youtube.com/watch?v=${videoId}\n\n[Tip: Tap "API Key Setup" in the top bar and paste a free Google YouTube Data API v3 key to automatically fetch the complete multi-line description and exact hidden tags for any video.]`;
+          state.tags = generateSmartTagsFromTitle(state.title, state.channel);
+          renderAll();
+          extractBtn.disabled = false;
+          extractBtn.innerHTML = originalBtnHtml;
+          showToast('Thumbnails, title & SEO tags extracted!');
+          return;
+        }
+      } catch (e) {
+        // Fallback if offline
+      }
+
+      // 3. Direct ID fallback
+      state.title = `YouTube Video (${videoId})`;
+      state.channel = 'YouTube Creator';
+      state.stats = 'Direct Thumbnail Mode';
+      state.sourceLabel = 'Direct ID Extraction';
+      state.description = `YouTube Video ID: ${videoId}\nWatch URL: https://www.youtube.com/watch?v=${videoId}\n\nAdd a free YouTube Data API v3 key in "API Key Setup" to pull full descriptions and tags for custom videos.`;
+      state.tags = ['YouTube Video', videoId, 'HD Thumbnail', 'Creator SEO'];
+      renderAll();
+      extractBtn.disabled = false;
+      extractBtn.innerHTML = originalBtnHtml;
+      showToast('Extracted thumbnails for video ID: ' + videoId);
+    }
+
+    function resetToBlankState() {
+      state.hasLoadedVideo = false;
+      state.videoId = '';
+      state.title = '';
+      state.channel = '';
+      state.stats = '';
+      state.sourceLabel = '';
+      state.description = '';
+      state.tags = [];
+      document.getElementById('ytUrlInput').value = '';
+      document.getElementById('errorBanner').classList.add('hidden');
+      renderAll();
+      showToast('Cleared workspace');
+    }
+
+    function getThumbUrl(videoId, code) {
+      if (!videoId) return 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+      return `https://i.ytimg.com/vi/${videoId}/${code}.jpg`;
+    }
+
+    async function downloadThumbnailImage(videoId, code) {
+      if (!videoId) return;
+      const url = getThumbUrl(videoId, code);
+      const filename = `mahsua-ytlab-thumbnail-${videoId}-${code}.jpg`;
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network error');
+        const blob = await response.blob();
+        const blobUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = blobUrl;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
+        showToast(`Downloading ${filename}`);
+      } catch (err) {
+        window.open(url, '_blank', 'noopener,noreferrer');
+        showToast('Opened HD thumbnail in new tab — long-press or right-click to save!');
+      }
+    }
+
+    function renderThumbnailsSection() {
+      if (!state.hasLoadedVideo) return;
+      const activeMeta = THUMB_QUALITIES.find(q => q.code === state.activeThumbCode) || THUMB_QUALITIES[0];
+      const activeUrl = getThumbUrl(state.videoId, activeMeta.code);
+
+      document.getElementById('activeThumbLabel').textContent = `${activeMeta.label} (${activeMeta.dims})`;
+      document.getElementById('activeThumbCode').textContent = `${activeMeta.code}.jpg`;
+      document.getElementById('directThumbUrlInput').value = activeUrl;
+
+      const mainPreview = document.getElementById('mainThumbPreview');
+      mainPreview.src = activeUrl;
+      mainPreview.onerror = () => {
+        if (state.activeThumbCode === 'maxresdefault' && state.videoId) {
+          mainPreview.src = getThumbUrl(state.videoId, 'hqdefault');
+        }
+      };
+
+      const listContainer = document.getElementById('thumbQualitiesList');
+      listContainer.innerHTML = '';
+
+      THUMB_QUALITIES.forEach(item => {
+        const isSelected = item.code === state.activeThumbCode;
+        const itemUrl = getThumbUrl(state.videoId, item.code);
+        const row = document.createElement('div');
+        row.className = `p-2.5 sm:p-3 rounded-xl border transition flex items-center justify-between gap-2.5 cursor-pointer ${
+          isSelected
+            ? 'bg-pink-50/90 dark:bg-pink-500/15 border-pink-500 dark:border-pink-500/50 text-slate-900 dark:text-white'
+            : 'bg-slate-50 dark:bg-slate-950/70 border-slate-200 dark:border-slate-800 hover:border-blue-300 dark:hover:border-slate-700 text-slate-700 dark:text-slate-300'
+        }`;
+
+        row.innerHTML = `
+          <div class="flex items-center gap-2.5 min-w-0">
+            <img src="${itemUrl}" alt="${item.label}" class="w-14 sm:w-16 aspect-video rounded-lg object-cover border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-900 shrink-0" />
+            <div class="min-w-0">
+              <div class="text-xs font-bold text-slate-900 dark:text-white truncate">${item.label}</div>
+              <div class="text-[11px] text-slate-500 dark:text-slate-400 font-mono truncate">${item.dims} • ${item.badge}</div>
+            </div>
+          </div>
+          <button data-dl-code="${item.code}" class="dl-quality-btn px-2.5 py-1.5 rounded-lg bg-gradient-to-r from-pink-600 to-blue-600 hover:opacity-95 text-white text-[11px] font-semibold transition shrink-0">
+            Download
+          </button>
+        `;
+
+        row.addEventListener('click', (e) => {
+          if (e.target.closest('.dl-quality-btn')) return;
+          state.activeThumbCode = item.code;
+          renderThumbnailsSection();
+        });
+
+        row.querySelector('.dl-quality-btn').addEventListener('click', (e) => {
+          e.stopPropagation();
+          downloadThumbnailImage(state.videoId, item.code);
+        });
+
+        listContainer.appendChild(row);
+      });
+    }
+
+    function renderDescriptionSection() {
+      if (!state.hasLoadedVideo) return;
+      document.getElementById('descTitleField').value = state.title;
+      const textarea = document.getElementById('descriptionTextarea');
+      textarea.value = state.description;
+      updateDescriptionCountersAndExtracts(state.description);
+    }
+
+    function updateDescriptionCountersAndExtracts(descText) {
+      const text = descText || '';
+      const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+      const chars = text.length;
+      document.getElementById('descStatsCounter').textContent = `${words} words • ${chars} chars`;
+
+      const lines = text.split('\n');
+      const timestamps = [];
+      lines.forEach(line => {
+        const match = line.match(/\b(\d{1,2}:\d{2}(?::\d{2})?)\b\s*[-–—:]?\s*(.*)/);
+        if (match) {
+          timestamps.push({ time: match[1], label: match[2] || 'Chapter Marker' });
+        }
+      });
+
+      const tsContainer = document.getElementById('timestampsList');
+      document.getElementById('timestampCountBadge').textContent = String(timestamps.length);
+      tsContainer.innerHTML = '';
+
+      if (timestamps.length === 0) {
+        tsContainer.innerHTML = `<p class="text-slate-400 dark:text-slate-500 text-xs italic">No timestamps detected in this description.</p>`;
+      } else {
+        timestamps.forEach(ts => {
+          const item = document.createElement('div');
+          item.className = 'flex items-center justify-between gap-2 p-2 rounded-lg bg-pink-50/50 dark:bg-slate-950/80 border border-pink-200/70 dark:border-slate-800';
+          item.innerHTML = `
+            <div class="truncate">
+              <span class="font-mono text-pink-600 dark:text-pink-400 font-semibold mr-2">${ts.time}</span>
+              <span class="text-slate-700 dark:text-slate-200">${ts.label}</span>
+            </div>
+            <button class="text-[11px] text-blue-600 dark:text-blue-400 font-semibold px-2 py-0.5 rounded bg-white dark:bg-slate-900 border border-blue-200 dark:border-slate-700 shrink-0">Copy</button>
+          `;
+          item.querySelector('button').addEventListener('click', () => {
+            copyTextToClipboard(`${ts.time} ${ts.label}`, `Copied timestamp ${ts.time}`);
+          });
+          tsContainer.appendChild(item);
+        });
+      }
+
+      const urlMatches = text.match(/https?:\/\/[^\s)]+/g) || [];
+      const uniqueUrls = Array.from(new Set(urlMatches));
+      const linksContainer = document.getElementById('extractedLinksList');
+      document.getElementById('linksCountBadge').textContent = String(uniqueUrls.length);
+      linksContainer.innerHTML = '';
+
+      if (uniqueUrls.length === 0) {
+        linksContainer.innerHTML = `<p class="text-slate-400 dark:text-slate-500 text-xs italic">No external URLs found in description.</p>`;
+      } else {
+        uniqueUrls.forEach(link => {
+          const row = document.createElement('div');
+          row.className = 'flex items-center justify-between gap-2 p-2 rounded-lg bg-emerald-50/50 dark:bg-slate-950/80 border border-emerald-200/70 dark:border-slate-800';
+          row.innerHTML = `
+            <a href="${link}" target="_blank" rel="noopener noreferrer" class="text-emerald-700 dark:text-emerald-400 hover:underline truncate font-mono">${link}</a>
+            <button class="text-[11px] text-emerald-700 dark:text-emerald-400 font-semibold px-2 py-0.5 rounded bg-white dark:bg-slate-900 border border-emerald-200 dark:border-slate-700 shrink-0">Copy</button>
+          `;
+          row.querySelector('button').addEventListener('click', () => {
+            copyTextToClipboard(link, 'Copied URL!');
+          });
+          linksContainer.appendChild(row);
+        });
+      }
+    }
+
+    function renderTagsSection() {
+      if (!state.hasLoadedVideo) return;
+      const container = document.getElementById('tagsChipContainer');
+      const countBadge = document.getElementById('tagCountBadge');
+      const rawTextarea = document.getElementById('rawTagsTextarea');
+      const charBadge = document.getElementById('tagCharLimitBadge');
+
+      countBadge.textContent = String(state.tags.length);
+      container.innerHTML = '';
+
+      state.tags.forEach((tag, idx) => {
+        const chip = document.createElement('div');
+        chip.className = 'tag-chip inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-emerald-50 dark:hover:bg-slate-800 border border-emerald-300 dark:border-slate-700 text-xs font-medium text-slate-800 dark:text-slate-100 shadow-sm cursor-pointer';
+        chip.innerHTML = `
+          <span class="text-emerald-700 dark:text-emerald-400 font-semibold">#</span><span>${tag}</span>
+          <button title="Remove tag" class="text-slate-400 hover:text-pink-600 ml-1 font-bold">×</button>
+        `;
+        chip.addEventListener('click', (e) => {
+          if (e.target.tagName === 'BUTTON') {
+            state.tags.splice(idx, 1);
+            renderTagsSection();
+            return;
+          }
+          copyTextToClipboard(tag, `Copied tag: "${tag}"`);
+        });
+        container.appendChild(chip);
+      });
+
+      const commaJoined = state.tags.join(', ');
+      rawTextarea.value = commaJoined;
+      const charCount = commaJoined.length;
+      charBadge.textContent = `${charCount} / 500 chars`;
+      charBadge.className = `text-[11px] font-mono ${charCount <= 500 ? 'text-emerald-700 dark:text-emerald-400' : 'text-pink-600 dark:text-pink-400'}`;
+
+      const checklist = document.getElementById('seoChecklistContainer');
+      const checks = [
+        {
+          label: 'Tag Count (8+ recommended)',
+          passed: state.tags.length >= 8,
+          detail: `${state.tags.length} tags active`
+        },
+        {
+          label: 'Within 500 Character Studio Limit',
+          passed: charCount > 0 && charCount <= 500,
+          detail: `${charCount} characters used`
+        },
+        {
+          label: 'Includes Multi-Word Long-Tail Keywords',
+          passed: state.tags.some(t => t.trim().includes(' ')),
+          detail: 'Helps rank in search suggestions'
+        },
+        {
+          label: 'Title & Description Present',
+          passed: state.description.length > 40,
+          detail: `${state.description.length} chars in description`
+        }
+      ];
+
+      checklist.innerHTML = checks.map(c => `
+        <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2">
+          <div>
+            <div class="font-semibold ${c.passed ? 'text-slate-800 dark:text-slate-200' : 'text-pink-700 dark:text-pink-300'}">${c.label}</div>
+            <div class="text-[11px] text-slate-500 dark:text-slate-400">${c.detail}</div>
+          </div>
+          <span class="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase ${
+            c.passed
+              ? 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300'
+              : 'bg-pink-100 dark:bg-pink-500/20 text-pink-700 dark:text-pink-300'
+          }">${c.passed ? 'Good' : 'Check'}</span>
+        </div>
+      `).join('');
+    }
+
+    function renderWorkspaceVisibility() {
+      const dot = document.getElementById('apiIndicatorDot');
+      const txt = document.getElementById('apiIndicatorText');
+      if (state.apiKey) {
+        dot.className = 'w-2 h-2 rounded-full bg-emerald-500 shrink-0';
+        txt.textContent = 'API Key Active';
+      } else {
+        dot.className = 'w-2 h-2 rounded-full bg-amber-500 shrink-0';
+        txt.textContent = 'API Key Setup';
+      }
+
+      const emptySection = document.getElementById('emptyStateSection');
+      const resultsContainer = document.getElementById('resultsContainer');
+
+      if (!state.hasLoadedVideo) {
+        emptySection.classList.remove('hidden');
+        resultsContainer.classList.add('hidden');
+        return;
+      }
+
+      emptySection.classList.add('hidden');
+      resultsContainer.classList.remove('hidden');
+    }
+
+    function switchTab(tabId) {
+      state.activeTab = tabId;
+      document.querySelectorAll('.tab-panel').forEach(panel => {
+        panel.classList.add('hidden');
+      });
+      const activePanel = document.getElementById(`tab-${tabId}`);
+      if (activePanel) activePanel.classList.remove('hidden');
+
+      const tabColors = {
+        thumbnails: 'bg-pink-600 text-white shadow-sm',
+        description: 'bg-blue-600 text-white shadow-sm',
+        tags: 'bg-emerald-600 text-white shadow-sm'
+      };
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        const t = btn.getAttribute('data-tab');
+        const isCurrent = t === tabId;
+        btn.className = isCurrent
+          ? `tab-btn px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-1.5 ${tabColors[t]}`
+          : 'tab-btn px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-1.5 bg-white hover:bg-slate-100 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800';
+      });
+    }
+
+    function renderAll() {
+      applyTheme();
+      renderWorkspaceVisibility();
+      if (state.hasLoadedVideo) {
+        renderThumbnailsSection();
+        renderDescriptionSection();
+        renderTagsSection();
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const urlInput = document.getElementById('ytUrlInput');
+      const errorBanner = document.getElementById('errorBanner');
+
+      // Ensure input is completely blank on initial load
+      urlInput.value = '';
+
+      // Initialize Google AdSense slots
+      initAdSenseUnits();
+
+      document.getElementById('themeToggleBtn').addEventListener('click', () => {
+        state.darkMode = !state.darkMode;
+        try {
+          localStorage.setItem('mahsua_yt_theme', state.darkMode ? 'dark' : 'light');
+        } catch (e) {}
+        applyTheme();
+        showToast(state.darkMode ? 'Switched to Dark Mode' : 'Switched to Light Mode');
+      });
+
+      function triggerExtraction() {
+        const raw = urlInput.value.trim();
+        const id = extractYouTubeId(raw);
+        if (!id) {
+          errorBanner.classList.remove('hidden');
+          showToast('Please paste a valid YouTube link first', 'error');
+          return;
+        }
+        errorBanner.classList.add('hidden');
+        loadVideoData(id);
+      }
+
+      document.getElementById('extractBtn').addEventListener('click', triggerExtraction);
+      urlInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') triggerExtraction();
+      });
+
+      document.getElementById('clearInputBtn').addEventListener('click', () => {
+        resetToBlankState();
+        urlInput.focus();
+      });
+
+      document.getElementById('resetWorkspaceBtn').addEventListener('click', () => {
+        resetToBlankState();
+      });
+
+      document.getElementById('dismissErrorBtn').addEventListener('click', () => {
+        errorBanner.classList.add('hidden');
+      });
+
+      document.getElementById('pasteClipboardBtn').addEventListener('click', async () => {
+        try {
+          if (navigator.clipboard && navigator.clipboard.readText) {
+            const clipText = await navigator.clipboard.readText();
+            if (clipText && clipText.trim()) {
+              urlInput.value = clipText.trim();
+              triggerExtraction();
+              return;
+            }
+          }
+          urlInput.focus();
+          showToast('Tap inside the box and paste your YouTube link');
+        } catch (err) {
+          urlInput.focus();
+          showToast('Tap inside the box and paste your YouTube link');
+        }
+      });
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          switchTab(btn.getAttribute('data-tab'));
+        });
+      });
+
+      document.getElementById('copyThumbUrlBtn').addEventListener('click', () => {
+        const url = document.getElementById('directThumbUrlInput').value;
+        copyTextToClipboard(url, 'Thumbnail URL copied!');
+      });
+
+      document.getElementById('downloadActiveThumbBtn').addEventListener('click', () => {
+        downloadThumbnailImage(state.videoId, state.activeThumbCode);
+      });
+
+      document.getElementById('descriptionTextarea').addEventListener('input', (e) => {
+        state.description = e.target.value;
+        updateDescriptionCountersAndExtracts(state.description);
+      });
+
+      document.getElementById('copyTitleBtn').addEventListener('click', () => {
+        copyTextToClipboard(state.title, 'Video title copied!');
+      });
+
+      document.getElementById('copyDescBtn').addEventListener('click', () => {
+        copyTextToClipboard(state.description, 'Full video description copied!');
+      });
+
+      document.getElementById('downloadDescTxtBtn').addEventListener('click', () => {
+        if (!state.hasLoadedVideo) return;
+        const content = `TITLE:\n${state.title}\n\nCHANNEL:\n${state.channel}\n\nVIDEO URL:\nhttps://www.youtube.com/watch?v=${state.videoId}\n\nDESCRIPTION:\n${state.description}\n`;
+        const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `mahsua-ytlab-description-${state.videoId}.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast('Saved description as .txt file!');
+      });
+
+      document.getElementById('copyAllTagsCommaBtn').addEventListener('click', () => {
+        copyTextToClipboard(state.tags.join(', '), 'Copied all comma-separated tags!');
+      });
+
+      document.getElementById('copyAllHashtagsBtn').addEventListener('click', () => {
+        const hashtags = state.tags
+          .map(t => '#' + t.replace(/\s+/g, '').toLowerCase())
+          .join(' ');
+        copyTextToClipboard(hashtags, 'Copied all tags as #hashtags!');
+      });
+
+      document.getElementById('exportTagsCsvBtn').addEventListener('click', () => {
+        if (!state.hasLoadedVideo || state.tags.length === 0) {
+          showToast('No tags to export yet!', 'error');
+          return;
+        }
+        const rows = ['"Tag Number","YouTube Tag","Character Length"'];
+        state.tags.forEach((t, idx) => {
+          const escaped = String(t).replace(/"/g, '""');
+          rows.push(`"${idx + 1}","${escaped}","${t.length}"`);
+        });
+        const csvContent = rows.join('\n');
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `mahsua-ytlab-tags-${state.videoId}.csv`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast('Exported tags to CSV!');
+      });
+
+      document.getElementById('addCustomTagBtn').addEventListener('click', () => {
+        const input = document.getElementById('customTagInput');
+        const val = input.value.trim();
+        if (!val) return;
+        if (!state.tags.includes(val)) {
+          state.tags.push(val);
+          renderTagsSection();
+          showToast(`Added tag: ${val}`);
+        }
+        input.value = '';
+      });
+
+      document.getElementById('customTagInput').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          document.getElementById('addCustomTagBtn').click();
+        }
+      });
+
+      document.getElementById('exportJsonBtn').addEventListener('click', () => {
+        if (!state.hasLoadedVideo) return;
+        const report = [
+          '=== MAHSUA YTLAB (ytlab.mahsua.com) — YOUTUBE VIDEO SEO REPORT ===',
+          `Video ID: ${state.videoId}`,
+          `Watch URL: https://www.youtube.com/watch?v=${state.videoId}`,
+          `Title: ${state.title}`,
+          `Channel: ${state.channel}`,
+          '',
+          '--- THUMBNAIL LINKS ---',
+          `MaxRes (1080p/720p): ${getThumbUrl(state.videoId, 'maxresdefault')}`,
+          `Standard (480p):     ${getThumbUrl(state.videoId, 'sddefault')}`,
+          `High Quality (360p): ${getThumbUrl(state.videoId, 'hqdefault')}`,
+          `Medium (180p):       ${getThumbUrl(state.videoId, 'mqdefault')}`,
+          '',
+          '--- TAGS (COMMA SEPARATED) ---',
+          state.tags.join(', '),
+          '',
+          '--- FULL DESCRIPTION ---',
+          state.description
+        ].join('\n');
+
+        const blob = new Blob([report], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `mahsua-ytlab-seo-${state.videoId}.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast('Downloaded complete SEO report (.txt)!');
+      });
+
+      document.querySelectorAll('.faq-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+          const answer = item.querySelector('.faq-answer');
+          const icon = item.querySelector('.faq-icon');
+          const isOpen = !answer.classList.contains('hidden');
+          if (isOpen) {
+            answer.classList.add('hidden');
+            icon.textContent = '+';
+          } else {
+            answer.classList.remove('hidden');
+            icon.textContent = '−';
+          }
+        });
+      });
+
+      const apiModal = document.getElementById('apiKeyModal');
+      const apiInput = document.getElementById('apiKeyInput');
+      const apiSavedStatus = document.getElementById('apiKeySavedStatus');
+
+      function openApiModal() {
+        apiInput.value = state.apiKey;
+        apiSavedStatus.classList.toggle('hidden', !state.apiKey);
+        apiModal.classList.remove('hidden');
+        apiModal.classList.add('flex');
+      }
+
+      function closeApiModal() {
+        apiModal.classList.add('hidden');
+        apiModal.classList.remove('flex');
+      }
+
+      document.getElementById('openApiModalBtn').addEventListener('click', openApiModal);
+      document.getElementById('closeApiModalBtn').addEventListener('click', closeApiModal);
+      document.getElementById('cancelApiModalBtn').addEventListener('click', closeApiModal);
+
+      document.getElementById('saveApiKeyBtn').addEventListener('click', () => {
+        state.apiKey = apiInput.value.trim();
+        try {
+          if (state.apiKey) {
+            localStorage.setItem('mahsua_yt_api_key', state.apiKey);
+          } else {
+            localStorage.removeItem('mahsua_yt_api_key');
+          }
+        } catch (e) {}
+        closeApiModal();
+        renderWorkspaceVisibility();
+        if (state.hasLoadedVideo && state.videoId) {
+          loadVideoData(state.videoId);
+        } else {
+          showToast('Saved API Key!');
+        }
+      });
+
+      document.getElementById('clearApiKeyBtn').addEventListener('click', () => {
+        state.apiKey = '';
+        apiInput.value = '';
+        try {
+          localStorage.removeItem('mahsua_yt_api_key');
+        } catch (e) {}
+        apiSavedStatus.classList.add('hidden');
+        renderWorkspaceVisibility();
+        showToast('Removed saved API key');
+      });
+
+      // Open WhatsApp Inquiry Link Directly (https://api.whatsapp.com/send/?phone=919752107808)
+      document.getElementById('copyBusinessPitchBtn').addEventListener('click', () => {
+        const waUrl = 'https://api.whatsapp.com/send/?phone=919752107808&text=' + encodeURIComponent('Hi Mahsua Technology! I visited Mahsua YTLab (ytlab.mahsua.com) and want to inquire about your services.');
+        window.open(waUrl, '_blank', 'noopener,noreferrer');
+        showToast('Opening WhatsApp chat with Mahsua Technology...');
+      });
+
+      renderAll();
+    });
+  </script>
+</body>
+</html>
